@@ -4,21 +4,17 @@ const Service = require('egg').Service;
 
 class NewsService extends Service {
   async list(page = 1) {
-    // read config
     const { serverUrl, pageSize } = this.config.news;
-
-    // use build-in http client to GET hacker-news api
     const { data } = await this.ctx.curl(`${serverUrl}/posts?per_page=${pageSize}&page=${page}`, {
       dataType: 'json',
     });
-
-    // parallel GET detail
-    // const newsList = await Promise.all(
-    //   Object.keys(idList).map(key => {
-    //     const url = `${serverUrl}/item/${idList[key]}.json`;
-    //     return this.ctx.curl(url, { dataType: 'json' });
-    //   })
-    // );
+    return data;
+  }
+  async detail(id) {
+    const { serverUrl } = this.config.news;
+    const { data } = await this.ctx.curl(`${serverUrl}/posts/${id}`, {
+      dataType: 'json',
+    });
     return data;
   }
 }

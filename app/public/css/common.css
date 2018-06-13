@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%;
+  min-height: 100%; }
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: "Microsoft Yahei",sans-serif;
+  font-size: 1.6rem;
+  min-height: 100vh; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500; }
+
+.textOverflow {
+  display: block;
+  width: 100%;
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.arrow_up {
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 0 12px 12px;
+  border-style: solid;
+  border-color: transparent transparent #d33;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.arrow_down {
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: #d33 transparent transparent;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.arrow_left {
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 10px 10px 10px 0;
+  border-style: solid;
+  border-color: transparent #d33 transparent transparent;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.arrow_right {
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 10px 0 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #d33;
+  position: absolute;
+  top: 0;
+  left: 0; }
