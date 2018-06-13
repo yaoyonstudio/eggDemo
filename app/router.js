@@ -8,5 +8,6 @@ module.exports = app => {
   router.get('/', controller.home.index);
   router.get('/news', controller.news.list);
   router.get('/news/:id', controller.news.detail);
-  router.get('/user/:id', controller.users.info);
+  // 注册RESTful风格路由
+  router.resources('users', '/api/v1/users', controller.users);
 };

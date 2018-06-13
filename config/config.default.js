@@ -18,6 +18,16 @@ module.exports = appInfo => {
     serverUrl: 'https://www.thatyou.cn/wp-json/wp/v2',
   };
 
+  config.cors = {
+    origin: '*',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
+    credentials: true,
+    csrf: {
+      headerNamer: 'csrftoken',
+      ignoreJSON: true,
+    },
+  };
+
   // add your config here
   config.middleware = [];
 
