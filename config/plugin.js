@@ -22,3 +22,18 @@ exports.passport = {
   enable: true,
   package: 'egg-passport',
 };
+
+exports.bcrypt = {
+  enable: true,
+  package: 'egg-bcrypt',
+};
+
+exports.jwt = {
+  enable: true,
+  package: 'egg-jwt',
+};
+
+exports.cors = {
+  enable: true,
+  package: 'egg-cors',
+};

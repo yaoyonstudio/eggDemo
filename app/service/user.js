@@ -21,6 +21,7 @@ class UserService extends Service {
     return users;
   }
   async create(user) {
+    user.password = await this.ctx.genHash(user.password);
     const result = await this.app.mysql.insert('users', user);
     return result;
   }
@@ -28,15 +29,23 @@ class UserService extends Service {
     const user = await this.app.mysql.get('users', { id: uid });
     return user;
   }
-  async update(user) {
+  async update(uid, userData) {
     // 如果主键是id，会自动根据主键id查找并更新
-    const result = await this.app.mysql.update('users', user);
+    const user = await this.ctx.service.user.read(uid);
+    if (!user) {
+      this.ctx.throw(404, '用户不存在');
+    }
+    userData.id = uid;
+    if (userData.password) {
+      userData.password = await this.ctx.genHash(userData.password);
+    }
+    const result = await this.app.mysql.update('users', userData);
     // 如果主键不是id，则需要配置where
     // const result = await this.app.mysql.update('users', user, { where: { user_id: 1 } })
-    return result.affectedRows;
+    return result;
   }
-  async delete(id) {
-    const result = await this.app.mysql.delete('users', { id });
+  async delete(uid) {
+    const result = await this.app.mysql.delete('users', { id: uid });
     return result;
   }
 }
