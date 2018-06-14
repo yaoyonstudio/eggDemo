@@ -4,8 +4,33 @@ const Service = require('egg').Service;
 
 
 class UserService extends Service {
-  async select() {
-    const users = await this.app.mysql.select('users');
+  async select(query) {
+    console.log('query:', query);
+    /*
+      {
+        page: '1',
+        pagesize: '4',
+        order: 'username-desc,sex-asc',
+        field: 'id,username,sex',
+        filter: 'status:1,role:2-3',
+        keyword: 'user'
+      }
+    */
+    const params = {};
+    params.limit = query.pagesize || 10;
+    params.offset = query.page ? (query.page - 1) * params.limit : 0;
+    params.columns = query.field.split(',');
+    // const _orders = query.order.split(',');
+    // const _ordersArr = [];
+    // if (_orders.length) {
+    //   _orders.map(item => {
+    //     let _od = item.split('-');
+    //     if (_od.length === 2) {
+
+    //     }
+    //   })
+    // };
+    const users = await this.app.mysql.select('users', params);
     return users;
   }
   async search(params) {

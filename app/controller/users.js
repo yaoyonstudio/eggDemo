@@ -18,7 +18,7 @@ class UserController extends Controller {
   }
   async index() {
     const ctx = this.ctx;
-    const users = await this.ctx.service.user.select();
+    const users = await this.ctx.service.user.select(ctx.query);
     ctx.helper.success({ ctx, res: users, msg: '查询成功' });
   }
   async show() {
