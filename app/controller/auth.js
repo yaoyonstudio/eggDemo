@@ -7,6 +7,10 @@ const loginRule = {
   password: 'string',
 };
 
+const registerRule = {
+  username: 'string',
+  password: { type: 'string', min: 8 },
+};
 
 class AuthController extends Controller {
   async login() {
@@ -14,6 +18,12 @@ class AuthController extends Controller {
     ctx.validate(loginRule);
     const res = await ctx.service.auth.login(ctx.request.body);
     ctx.helper.success({ ctx, res, msg: '登录成功' });
+  }
+  async register() {
+    const { ctx } = this;
+    ctx.validate(registerRule);
+    const res = await ctx.service.auth.register(ctx.request.body);
+    ctx.helper.success({ ctx, res, msg: '注册成功' });
   }
 }
 

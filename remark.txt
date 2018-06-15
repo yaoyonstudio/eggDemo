@@ -1,0 +1,43 @@
+
+1：项目user模块使用 egg-mysql
+2：项目news模块使用 egg-sequelize
+
+使用 sequelize-cli 创建迁移：
+
+(1) 初始化
+
+sequelize init
+
+(2) 创建Model
+
+sequelize model:generate --name User --attributes username:string,password:string,nickname:string,sex:integer,birthday:string,mobile:string,status:integer,role:integer
+
+sequelize model:generate --name News --attributes title:string,content:text,keyword:string,excerpt:string,slug:string,source:string,source_link:string,author:string,featuredImg:string,user_id:integer
+
+(3) 执行迁移
+
+使用 sequelize-cli 原生
+sequelize db:migrate
+
+使用 egg-sequelize
+egg-sequelize db:migrate
+
+
+(4) 修改模型时，使用
+
+egg-sequelize migration:create
+
+创建迁移文件，修改好迁移文件好，再次第3步迁移
+
+
+(5) seed(可选，项目中已有)
+
+创建seed:
+sequelize seed:generate --name demo-user
+sequelize seed:generate --name demo-news
+
+执行：
+sequelize db:seed:all
+
+
+

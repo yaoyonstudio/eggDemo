@@ -29,10 +29,10 @@
       </a>
     </div>
 
-    <ul class="news-list">
+    <ul class="posts-list">
       {% for item in list %}
         <li>
-          <a class="flex-r flex-s-b newsItem" href="/news/{{ item.id }}">
+          <a class="flex-r flex-s-b postItem" href="/posts/{{ item.id }}">
             <img src="{{ item.thumbnailurl }}" alt="{{ item.title }}" />
             <aside class="flexItem">
               <h4>{{ item.title }}</h4>
@@ -54,12 +54,12 @@
           </li>
         {% else %}
           <li class="page-item">
-            <a class="page-link" href="{{ '/news?page=' + (+page - 1) }}" tabindex="-1">上一页</a>
+            <a class="page-link" href="{{ '/posts?page=' + (+page - 1) }}" tabindex="-1">上一页</a>
           </li>
         {% endif %}
         {% if hasMore %}
           <li>
-            <a class="page-link" href="{{ '/news?page=' + (+page + 1) }}">下一页</a>
+            <a class="page-link" href="{{ '/posts?page=' + (+page + 1) }}">下一页</a>
           </li>
         {% else %}
           <li class="page-item disabled">

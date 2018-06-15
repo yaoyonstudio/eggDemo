@@ -25,6 +25,15 @@ class AuthService extends Service {
     // 生成Token
     return { token: await service.auth.createToken(user.id) };
   }
+  async register(payload) {
+    const { ctx, service } = this;
+    const user = await this.app.mysql.get('users', { username: payload.username });
+    if (user) {
+      ctx.throw(404, '用户名已存在');
+    }
+    const res = await service.user.create(payload);
+    return res;
+  }
 }
 
 module.exports = AuthService;
