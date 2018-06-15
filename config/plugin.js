@@ -18,6 +18,11 @@ exports.sequelize = {
   package: 'egg-sequelize',
 };
 
+exports.graphql = {
+  enable: true,
+  package: 'egg-graphql',
+};
+
 exports.validate = {
   enable: true,
   package: 'egg-validate',

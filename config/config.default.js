@@ -7,7 +7,7 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1528806486462_9070';
 
   // 加载 errorHandler 中间件
-  config.middleware = [ 'errorHandler' ];
+  config.middleware = [ 'errorHandler', 'graphql' ];
 
   config.view = {
     defaultViewEngine: 'nunjucks',
@@ -67,6 +67,15 @@ module.exports = appInfo => {
     port: '3306',
     username: 'root',
     password: '',
+  };
+
+  exports.graphql = {
+    router: '/graphql',
+    // 是否加载到 app 上，默认开启
+    app: true,
+    // 是否加载到 agent 上，默认关闭
+    agent: false,
+    graphiql: true,
   };
 
   config.posts = {

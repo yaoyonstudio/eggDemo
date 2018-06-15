@@ -1,0 +1,10 @@
+
+
+type Mutation {
+
+  # News
+  createNews (userID: ID!, title: String, content: String!): News
+  updateNews (id: ID!, title: String, content: String): News
+  deleteNews (id: ID!): News 
+
+}

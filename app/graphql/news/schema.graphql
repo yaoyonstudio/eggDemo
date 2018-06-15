@@ -1,0 +1,6 @@
+
+type News {
+  id: ID!
+  title: String!
+  content: String!
+}
