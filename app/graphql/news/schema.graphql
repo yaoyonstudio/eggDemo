@@ -1,6 +1,22 @@
-
 type News {
-  id: ID!
+  id: Int!
   title: String!
   content: String!
+  keyword: String
+  excerpt: String
+  slug: String
+  source: String
+  source_link: String
+  author: String
+  featuredImg: String
+  user_id: String
+  created_at: String
+  updated_at: String
+}
+
+type NewsList {
+  count: Int!
+  page: Int!
+  pagesize: Int!
+  data: [News!]
 }

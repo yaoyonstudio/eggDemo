@@ -5,8 +5,5 @@ module.exports = {
     user(root, { id }, ctx) {
       return ctx.connector.user.fetchById(id);
     },
-    news(root, params, ctx) {
-      return ctx.connector.news.fetchRecommandation();
-    },
   },
 };

@@ -1,17 +1,15 @@
 'use strict';
 
 module.exports = {
-  User: {
-    news(root, _, ctx) {
-      return ctx.connector.news.fetchByUserId(root.id);
-    },
-  },
+  // User: {
+  //   news(root, _, ctx) {
+  //     return ctx.connector.news.fetchByUserId(root.id);
+  //   },
+  // },
   Query: {
-    user(root, { id }, ctx) {
-      return ctx.connector.user.fetchById(id);
-    },
     news(root, params, ctx) {
-      return ctx.connector.news.fetchRecommandation();
+      console.log('params:', params);
+      return ctx.connector.news.select(params);
     },
   },
   Mutation: {

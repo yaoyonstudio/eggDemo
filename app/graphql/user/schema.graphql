@@ -3,6 +3,5 @@
 type User {
   id: ID!
   username: String!
-  news: [News!]
 }
 

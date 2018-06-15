@@ -1,0 +1,26 @@
+"id","title","content","keyword","excerpt","slug","source","source_link","author","featuredImg","user_id","created_at","updated_at"
+1,"post1","post1","post1","post1",NULL,1,NULL,NULL,NULL,1,NULL,NULL
+2,"post2","post2","post2","post2",NULL,1,NULL,NULL,NULL,1,NULL,NULL
+3,"post3","post3","post3","post3",NULL,4,NULL,NULL,NULL,1,NULL,NULL
+4,"post4","post4","post4","post4",NULL,1,NULL,NULL,NULL,1,NULL,NULL
+5,"post5","post5","post5","post5",NULL,3,NULL,NULL,NULL,1,NULL,NULL
+6,"apost6","post6","post6","post6",NULL,1,NULL,NULL,NULL,1,NULL,NULL
+7,"post7","post7","post7","post7",NULL,1,NULL,NULL,NULL,1,NULL,NULL
+8,"post8","post8","post8","post8",NULL,2,NULL,NULL,NULL,1,NULL,NULL
+9,"post9","post9","post9","post9",NULL,1,NULL,NULL,NULL,1,NULL,NULL
+10,"bpost10","post10","post10","post10",NULL,3,NULL,NULL,NULL,1,NULL,NULL
+11,"post11","post11","post11","post11",NULL,1,NULL,NULL,NULL,1,NULL,NULL
+12,"post12","post12","post12","post12",NULL,3,NULL,NULL,NULL,1,NULL,NULL
+13,"post13","post13","post13","post13",NULL,1,NULL,NULL,NULL,1,NULL,NULL
+14,"post14","post14","post14","post14",NULL,1,NULL,NULL,NULL,1,NULL,NULL
+15,"post15","post15","post15","post15",NULL,1,NULL,NULL,NULL,1,NULL,NULL
+16,"post16","post16","post16","post16",NULL,1,NULL,NULL,NULL,1,NULL,NULL
+17,"post17","post17","post17","post17",NULL,1,NULL,NULL,NULL,1,NULL,NULL
+18,"post18","post18","post18","post18",NULL,NULL,NULL,NULL,NULL,1,NULL,NULL
+19,"post19","post19","post19","post19",NULL,NULL,NULL,NULL,NULL,1,NULL,NULL
+20,"post20","post20","post20","post20",NULL,1,NULL,NULL,NULL,1,NULL,NULL
+21,"my post1","my post1 content","mypost1","my post1 excerpt","my post1 slug",NULL,NULL,NULL,NULL,1,"2018-06-15 08:56:31","2018-06-15 08:56:31"
+24,"my post24","my post24 content","mypost24","my post24 excerpt","my post24 slug",NULL,NULL,NULL,NULL,1,"2018-06-15 08:58:22","2018-06-15 09:15:16"
+25,"my post2","my post2 content","mypost2","my post2 excerpt","my post2 slug",1,NULL,NULL,NULL,1,"2018-06-15 09:08:58","2018-06-15 09:08:58"
+26,"my post2","my post2 content","mypost2","my post2 excerpt","my post2 slug",NULL,NULL,NULL,NULL,1,"2018-06-15 09:11:25","2018-06-15 09:11:25"
+27,"my post2","my post2 content","mypost2","my post2 excerpt","my post2 slug",1,NULL,NULL,NULL,1,"2018-06-15 09:11:31","2018-06-15 09:11:31"
