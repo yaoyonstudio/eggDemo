@@ -8,6 +8,15 @@ class UserConnector {
     this.loader = new DataLoader(this.fetch.bind(this));
   }
 
+  async show(uid) {
+    const user = await this.ctx.app.model.User.findOne({
+      where: {
+        id: uid,
+      },
+    }).then(u => u.toJSON());
+    return user;
+  }
+
   fetch(ids) {
     const users = this.ctx.app.model.User.findAll({
       where: {

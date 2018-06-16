@@ -1,6 +1,8 @@
 
 type Query {
-  news(page: Int, pagesize: Int, order: String, filter: String): NewsList
+  newslist(page: Int, pagesize: Int, order: String, filter: String): NewsList
+
+  news(id: ID!): News
 
   user(id: ID!): User
 }

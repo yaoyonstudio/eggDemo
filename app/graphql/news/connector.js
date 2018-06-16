@@ -50,6 +50,16 @@ class NewsConnector {
     return res;
   }
 
+  async show(nid) {
+    const news = await this.ctx.app.model.News.findOne({
+      where: {
+        id: nid,
+      },
+    }).then(n => n.toJSON());
+    console.log('news:', news);
+    return news;
+  }
+
   async fetchByUserId(userID) {
     const news = await this.ctx.app.model.News.findAll({
       where: {

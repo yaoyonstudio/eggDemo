@@ -9,9 +9,10 @@ type News {
   source_link: String
   author: String
   featuredImg: String
-  user_id: String
   created_at: String
   updated_at: String
+  user_id: ID!
+  user: User
 }
 
 type NewsList {

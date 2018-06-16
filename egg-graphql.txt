@@ -1,0 +1,20 @@
+Get News List:
+
+http://localhost:7001/graphql?query=query%20(%24page%3A%20Int%2C%20%24pagesize%3A%20Int%2C%20%24order%3A%20String%2C%20%24filter%3A%20String)%20%7B%0A%20%20newslist(page%3A%20%24page%2C%20pagesize%3A%20%24pagesize%2C%20order%3A%20%24order%2C%20filter%3A%20%24filter)%20%7B%0A%20%20%20%20count%0A%20%20%20%20page%0A%20%20%20%20pagesize%0A%20%20%20%20data%20%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%20%20title%0A%20%20%20%20%20%20content%0A%20%20%20%20%20%20excerpt%0A%20%20%20%20%20%20keyword%0A%20%20%20%20%20%20user_id%0A%20%20%20%20%20%20source%0A%20%20%20%20%20%20user%20%7B%0A%20%20%20%20%20%20%20%20id%0A%20%20%20%20%20%20%20%20username%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&variables=%7B%0A%20%20%22page%22%3A%201%2C%0A%20%20%22pagesize%22%3A%204%2C%0A%20%20%22order%22%3A%20%22id-desc%2Ctitle-asc%22%2C%0A%20%20%22filter%22%3A%20%22user_id%3A1%2Csource%3A1%22%0A%7D
+
+
+Get News Detail£º
+
+http://localhost:7001/graphql?query=query%20(%24id%3A%20ID!)%20%7B%0A%20%20news(id%3A%20%24id)%20%7B%0A%20%20%20%20id%0A%20%20%20%20title%0A%20%20%20%20content%0A%20%20%20%20excerpt%0A%20%20%20%20keyword%0A%20%20%20%20user_id%0A%20%20%20%20source%0A%20%20%20%20user%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%20%20username%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&variables=%7B%0A%20%20%22id%22%3A%201%0A%7D
+
+
+
+
+
+
+
+
+
+
+
+
